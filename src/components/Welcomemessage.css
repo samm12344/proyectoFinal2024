@@ -1,0 +1,55 @@
+
+  
+  .image {
+    height: 300px; /* Ajustar la altura al 100% del contenedor */
+    width: auto; /* Ajustar el ancho automáticamente */
+    transition: transform 0.3s ease;
+    animation: pulse 2s infinite alternate; /* Animación de pulso */
+    border-radius: 40px;
+    display: block;
+    
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block; /* Asegúrate de que el contenedor se comporte como inline-block */
+  }
+ 
+  
+  .centered-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .image:hover {
+    transform: scale(0.9);
+    animation-play-state: paused; /* Detiene la animación cuando hay hover */
+  }
+  
+  .image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro */
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Por defecto, ocultar el fondo oscuro */
+  }
+  
+  .image-container:hover::before {
+    opacity: 1; /* Mostrar el fondo oscuro al hacer hover */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  

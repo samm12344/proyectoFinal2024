@@ -1,0 +1,26 @@
+body {
+  background-image: url("./assets/pattern.jpg");
+  background-repeat: repeat; /* Repite la imagen en patrón */
+}
+/* Estilo del scrollbar para navegadores webkit */
+::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+  height: 20px; /* Altura del scrollbar */
+}
+
+/* Estilo del thumb (barra deslizante) */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(3, 90, 29, 0.877); /* Color de fondo del thumb */
+  border-radius: 10px; /* Radio de borde del thumb */
+  transition: background-color 0.3s ease; /* Transición para el cambio de color */
+}
+
+/* Estilo del thumb al pasar el cursor */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(3, 90, 29, 0.5); /* Nuevo color de fondo del thumb al pasar el cursor */
+}
+
+/* Estilo del track (barra de fondo) */
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.904); /* Color de fondo del track */
+}
